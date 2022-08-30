@@ -1,3 +1,35 @@
 body {
-    color: #ffcc00;
+
+    color: var(--darkBlue);
+    background-color: var(--darkBlue2);
+
+   
+}
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --darkBlue2: hsl(216, 12%, 8%);
+    --red: hsl(0, 100%, 74%);
+
+}
+
+.interactive-card {
+    background-color: var(--darkBlue);
+    color: var(--white);
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px; 
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.image-icon {
+    height: 50px;
+    width: 50px;
+    margin: 0 auto; 
+    
 }
