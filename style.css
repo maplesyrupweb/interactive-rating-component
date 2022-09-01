@@ -33,3 +33,24 @@ body {
     margin: 0 auto; 
     
 }
+
+
+.active  {
+    background-color: var(--lightGrey);
+    color: white;
+  }
+
+  .btn:hover {
+    background-color: var(--orange);
+    color: white;
+
+  }
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: var(--darkBlue2);
+    cursor: pointer;
+  }
+  
