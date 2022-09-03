@@ -25,6 +25,7 @@ body {
     margin-bottom: 10px; 
     margin-top: auto;
     margin-bottom: auto;
+    
 }
 
 .image-icon {
@@ -54,3 +55,16 @@ body {
     cursor: pointer;
   }
   
+  .btn-circle {
+    width: 40px;
+    height: 40px;
+    padding: 1px 1px;
+    border-radius: 25px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
