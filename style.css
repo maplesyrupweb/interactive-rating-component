@@ -21,10 +21,6 @@ body {
     background-color: var(--darkBlue);
     color: var(--white);
     margin: 0 auto; 
-    float: none; 
-    margin-bottom: 10px; 
-    margin-top: auto;
-    margin-bottom: auto;
     
 }
 
