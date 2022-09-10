@@ -21,7 +21,7 @@ body {
     background-color: var(--darkBlue);
     color: var(--white);
     margin: 0 auto; 
-    
+    padding-top: 20px;
 }
 
 .image-icon {
@@ -62,20 +62,31 @@ body {
 }
 
 .btn-submit {
-  background-color: var(--oragen);
+  background-color: var(--orange);
 }
 
 .rating {
-  color: var(--orange);
+  
   background-color: var(--mediumGrey);
   border-radius: 15px;
+
+    div {
+      font-size: 30px;
+      color: var(--red);
+    }
 
 }
 
 .thank-you-card {
- display: flex;
- flex-direction: column;
- align-items: center;
+ 
+}
+
+.review-card {
+
+}
+
+.btn-rating {
+  
 }
 
 .hide {

@@ -19,6 +19,7 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
+
 // // Add active class to the current button
 
 // //the div tht contains the 5 buttons
@@ -39,3 +40,21 @@ for (var i = 0; i < btns.length; i++) {
 //     this.className += " active";
 //   });
 // }
+
+const btn_submit = document.querySelector('.btn-submit');
+
+const review_card = document.querySelector('.review-card');
+
+const thankyou_card = document.querySelector('.thank-you-card'); 
+
+const rating_buttons = document.querySelectorAll('btn-rating');
+
+btn_submit.addEventListener('click', onSubmit);
+
+function onSubmit(){
+  console.log('Submit Click');
+  review_card.classList.add('hide');
+  thankyou_card.classList.remove('hide');
+}
+
+console.log(rating_buttons);
