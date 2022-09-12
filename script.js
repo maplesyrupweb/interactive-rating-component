@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
           ratingCard.remove()
           thankCard.hidden = false
           thankCard.classList.add('showing-card')
-        }, 1000);
+        });
       }
 
     }

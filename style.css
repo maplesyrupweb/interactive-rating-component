@@ -10,7 +10,7 @@ body {
     --orange: hsl(25, 97%, 53%);
     --white: hsl(0, 0%, 100%);
     --lightGrey: hsl(217, 12%, 63%);
-    --mediumGrey: hsl(216, 12%, 54%);
+    --mediumGrey: hsl(216, 11%, 50%);
     --darkBlue: hsl(213, 19%, 18%);
     --darkBlue2: hsl(216, 12%, 8%);
     --red: hsl(0, 100%, 74%);
@@ -33,8 +33,7 @@ body {
 
 
 .active  {
-    background-color: var(--lightGrey);
-    color: white;
+    // background-color: var(--orange);
   }
 
   .btn:hover {
@@ -65,29 +64,23 @@ body {
   background-color: var(--orange);
 }
 
-.rating {
-  
-  background-color: var(--mediumGrey);
-  border-radius: 15px;
 
-    div {
-      font-size: 30px;
-      color: var(--red);
-    }
 
+.grade {
+  border-radius: 50%;
+  background-color: var(--darkBlue2);
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.thank-you-card {
- 
+.grade:hover{
+  background-color: var(--orange);
+  cursor: pointer;
 }
 
-.review-card {
-
-}
-
-.btn-rating {
-  
-}
 
 .hide {
   display:none;
@@ -107,6 +100,51 @@ body {
   vertical-align: middle;
 }
 
+.enabled {
+  cursor: pointer;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+
+.card{
+  width: 25 rem;
+  border-radius: 16px;
+  background-image: linear-gradient(to bottom right, var(--dark-blue), var(--very-dark-blue));
+  width: 25vw;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.card-footer{
+  display: flex;
+  justify-content: center;
+}
+
+.card-footer button{
+  background-color: var(--orange);
+  color: var(--white);
+  width: 100%;
+  border: 0;
+  border-radius: 16px;
+  padding: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.card-footer button:hover{
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.card-rating {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.0rem 0;
+
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
