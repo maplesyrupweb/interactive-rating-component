@@ -1,60 +1,64 @@
-// Get the container element
-var btnContainer = document.getElementById("buttonDiv");
+window.addEventListener('DOMContentLoaded', (event) => {
 
-// Get all buttons with class="btn" inside the container
-var btns = btnContainer.getElementsByClassName("btn");
+  const gradeElts = document.querySelectorAll('.grade')
+  const grade = document.getElementById('user-grade')
+  const submitBtn = document.getElementById('submit-btn')
 
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
+  // Giving a grade between 1 and 5
 
-    // If there's no active class
-    if (current.length > 0) { 
-      current[0].className = current[0].className.replace(" active", "");
+  /**
+   * Set the selected grade element as active and update grade
+   * in the thank you card
+   * @param {*} event
+   */
+  const setGrade = (event) => {
+    // Remove active class to all grade elements
+    gradeElts.forEach(elt => elt.classList.remove('active'))
+    // Add active class to the selected element
+    const selectedGrade = event.target
+    selectedGrade.classList.add('active')
+    // Enable submit button
+    submitBtn.classList.remove('disabled')
+    submitBtn.classList.add('enabled')
+    // Set the grade in thank you card
+    grade.innerText = selectedGrade.innerText
+  }
+  /**
+   * Event listener on grade elements
+   */
+  if(gradeElts.length > 0 && grade){
+    gradeElts.forEach(elt => {
+      elt.addEventListener('click', setGrade)
+    })
+  }
+
+  // Submitting the rating
+
+  /**
+   * Remove Rating card and show Thank you card
+   */
+  const submitRating = () => {
+    // Check user has selected a grade
+    if(submitBtn.classList.contains('enabled')) {
+      const ratingCard = document.getElementById('rating')
+      const thankCard = document.getElementById('thanks')
+
+      if(ratingCard && thankCard) {
+        ratingCard.classList.add('hiding-card')
+        setTimeout(() => {
+          ratingCard.remove()
+          thankCard.hidden = false
+          thankCard.classList.add('showing-card')
+        }, 1000);
+      }
+
     }
+  }
 
-    // Add the active class to the current/clicked button
-    this.className += " active";
-  });
-}
-
-
-// // Add active class to the current button
-
-// //the div tht contains the 5 buttons
-// var header = document.getElementById("buttonDiv");
-
-// var btns = header.getElementsByClassName("btn");
-
-// for (var i = 0; i < btns.length; i++) {
-
-//   btns[i].addEventListener("click", function() 
-//   {
-//     var current = document.getElementsByClassName("active");
-
-//     //replace " active" with empty string
-//     current[0].className = current[0].className.replace(" active", "");
-    
-//     //add active to the current class name
-//     this.className += " active";
-//   });
-// }
-
-const btn_submit = document.querySelector('.btn-submit');
-
-const review_card = document.querySelector('.review-card');
-
-const thankyou_card = document.querySelector('.thank-you-card'); 
-
-const rating_buttons = document.querySelectorAll('btn-rating');
-
-btn_submit.addEventListener('click', onSubmit);
-
-function onSubmit(){
-  console.log('Submit Click');
-  review_card.classList.add('hide');
-  thankyou_card.classList.remove('hide');
-}
-
-console.log(rating_buttons);
+  /**
+   * Event listener on submit button
+   */
+  if(submitBtn) {
+    submitBtn.addEventListener('click', submitRating)
+  }
+});

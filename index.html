@@ -9,6 +9,7 @@
   <!-- Bootstrap 5.2 CSS and JS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
 
   <!-- CSS-->
   <link rel="stylesheet" href="style.css">
@@ -23,6 +24,7 @@
 <body>
 
   <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <section id="rating">
       <div class="card interactive-card review-card text-center mt-3" style="width: 18rem;">
         <div id="star-icon">
           <img src="/images/icon-star.svg" alt="icon of star">
@@ -33,23 +35,26 @@
               to help us improve our offering!
             </p>
             <div id="buttonDiv">
-              <!-- <div class="btn-group"> -->
-              <button class="btn btn-secondary btn-circle btn-rating " ><div>1</div></button>
-              <button class="btn btn-secondary btn-circle btn-rating" ><div>2</div></button>
-              <button class="btn btn-secondary btn-circle btn-rating" ><div>3</div></button>
-              <button class="btn btn-secondary btn-circle btn-rating" ><div>4</div></button>
-              <button class="btn btn-secondary btn-circle btn-rating" ><div>5</div></button>
-            </div> <!-- button Div -->
-            <a href="#" class="btn btn-primary btn-submit mt-3">Submit</a>  
-          </div> <!-- card body -->
+              <button class="btn btn-secondary btn-circle grade" ><div>1</div></button>
+              <button class="btn btn-secondary btn-circle grade" ><div>2</div></button>
+              <button class="btn btn-secondary btn-circle grade" ><div>3</div></button>
+              <button class="btn btn-secondary btn-circle grade" ><div>4</div></button>
+              <button class="btn btn-secondary btn-circle grade" ><div>5</div></button>
+            </div>
+            <div class="card-footer">
+              <button id="submit-btn" class="btn btn-primary btn-submit form-control mt-3 disabled">Submit</button>
+            </div>
+            
+        </div> <!-- card body -->
       </div> <!-- card -->
-
+    </section>
+    <section id="thanks" hidden>
       <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
         <div class="card interactive-card text-center mt-3 thank-you-card" style="width: 18rem;">
           <img class="rounded mx-auto d-block thank-you-img" src="images/illustration-thank-you.svg" alt="Thank you">
           <div class="card-body">
-            <div class="rating">
-              <div><span>4</span> out of <span>5</span></div>
+            <div class="notice">
+              You selected <span id="user-grade"></span> out of 5
             </div>
             <h5 class="card-title">Thank you!</h5>
             <p class="card-text">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch.! 
@@ -58,18 +63,12 @@
             
           </div>
         </div>
-
+      </section>
       </div>
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="#">Maple Syrup</a>.
       </div>
   </div>
-  
-    <script src="script.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
