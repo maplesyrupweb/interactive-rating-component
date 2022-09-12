@@ -24,7 +24,9 @@
 
   <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
       <div class="card interactive-card review-card text-center mt-3" style="width: 18rem;">
-        <img class="card-img-top image-icon" src="images/icon-star.svg" alt="Card image cap">
+        <div id="star-icon">
+          <img src="/images/icon-star.svg" alt="icon of star">
+        </div>
         <div class="card-body">
             <h5 class="card-title">How did we do?</h5>
             <p class="card-text">Please let us know how we did with your support request. All feedback is appreciated 
@@ -32,11 +34,11 @@
             </p>
             <div id="buttonDiv">
               <!-- <div class="btn-group"> -->
-              <button class="btn btn-secondary btn-circle btn-rating">1</button>
-              <button class="btn btn-secondary btn-circle btn-rating">2</button>
-              <button class="btn btn-secondary btn-circle btn-rating">3</button>
-              <button class="btn btn-secondary btn-circle btn-rating">4</button>
-              <button class="btn btn-secondary btn-circle btn-rating">5</button>
+              <button class="btn btn-secondary btn-circle btn-rating " ><div>1</div></button>
+              <button class="btn btn-secondary btn-circle btn-rating" ><div>2</div></button>
+              <button class="btn btn-secondary btn-circle btn-rating" ><div>3</div></button>
+              <button class="btn btn-secondary btn-circle btn-rating" ><div>4</div></button>
+              <button class="btn btn-secondary btn-circle btn-rating" ><div>5</div></button>
             </div> <!-- button Div -->
             <a href="#" class="btn btn-primary btn-submit mt-3">Submit</a>  
           </div> <!-- card body -->
